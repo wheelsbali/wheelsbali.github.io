@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wheels Bali — Motorbike & Scooter Rental | Daily, Weekly, Monthly</title>
+<meta name="description" content="Rent a motorbike or scooter in Bali with Wheels. Daily, weekly, and monthly rentals. Delivery to Canggu, Uluwatu, Seminyak, Ubud, Denpasar, Sanur and all Bali areas. WhatsApp us anytime.">
+<meta name="keywords" content="motorbike rental Bali, scooter rental Bali, bike rental Canggu, motorbike rental Uluwatu, monthly bike rental Bali, scooter hire Bali">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,700;1,800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+:root {
+  --black: #0A0A0A;
+  --white: #FFFFFF;
+  --gray-light: #F5F5F5;
+  --gray-mid: #E0E0E0;
+  --gray-text: #777777;
+  --gray-dark: #333333;
+}
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  color: var(--black);
+  background: var(--white);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.97);
+  border-bottom: 1px solid var(--gray-mid);
+  padding: 0 6vw;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.logo-img { height: 28px; display: block; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--gray-text); text-decoration: none; font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--black); }
+.nav-wa {
+  background: var(--black); color: var(--white);
+  padding: 10px 22px; font-size: 13px; font-weight: 500;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  text-decoration: none; transition: opacity 0.2s;
+  white-space: nowrap;
+}
+.nav-wa:hover { opacity: 0.75; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 6px 0; }
+
+/* HERO */
+.hero {
+  min-height: 90vh;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 0 6vw 72px;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-mid);
+  position: relative;
+}
+.hero-top {
+  position: absolute; top: 0; left: 0; right: 0;
+  display: flex; align-items: center; justify-content: flex-end;
+  padding: 40px 6vw;
+}
+.hero-top-tag {
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gray-text);
+}
+.hero-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(72px, 14vw, 180px);
+  font-weight: 800;
+  font-style: italic;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 40px;
+}
+.hero-bottom {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 40px; flex-wrap: wrap;
+}
+.hero-desc {
+  font-size: 17px; color: var(--gray-dark);
+  max-width: 420px; font-weight: 300; line-height: 1.7;
+}
+.hero-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; flex-shrink: 0; }
+.btn-black {
+  background: var(--black); color: var(--white);
+  padding: 14px 32px; font-size: 13px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; display: inline-block; transition: opacity 0.2s;
+}
+.btn-black:hover { opacity: 0.75; }
+.btn-outline {
+  background: transparent; color: var(--black);
+  padding: 13px 32px; font-size: 13px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; border: 1px solid var(--black);
+  display: inline-block; transition: all 0.2s;
+}
+.btn-outline:hover { background: var(--black); color: var(--white); }
+.hero-stats {
+  display: flex; gap: 48px; margin-top: 56px;
+  padding-top: 40px; border-top: 1px solid var(--gray-mid);
+  flex-wrap: wrap;
+}
+.stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 48px; font-weight: 700; line-height: 1;
+  letter-spacing: -0.02em;
+}
+.stat-label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-text); margin-top: 4px; }
+
+/* SECTIONS */
+section { padding: 88px 6vw; }
+.section-label {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gray-text); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+.section-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gray-text); }
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 700; font-style: italic;
+  line-height: 1.0; letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+.section-sub { font-size: 16px; color: var(--gray-dark); font-weight: 300; max-width: 500px; line-height: 1.75; }
+
+/* WHY */
+.why { background: var(--gray-light); }
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1px; background: var(--gray-mid);
+  border: 1px solid var(--gray-mid);
+  margin-top: 56px;
+}
+.why-item {
+  background: var(--gray-light);
+  padding: 36px 28px;
+}
+.why-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.1em;
+  color: var(--gray-text); margin-bottom: 16px;
+}
+.why-item h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+.why-item p { font-size: 14px; color: var(--gray-text); line-height: 1.65; font-weight: 300; }
+
+/* FLEET */
+.fleet-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
+.fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--gray-mid); border: 1px solid var(--gray-mid); }
+.bike-card { background: var(--white); }
+.bike-visual {
+  height: 220px;
+  background: var(--gray-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 72px; position: relative;
+  overflow: hidden;
+}
+.bike-visual img { width: 100%; height: 100%; object-fit: cover; }
+.bike-tag {
+  position: absolute; top: 16px; left: 16px;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  background: var(--black); color: var(--white);
+  padding: 5px 10px; font-weight: 600;
+}
+.bike-body { padding: 24px; }
+.bike-body h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px; font-weight: 700; font-style: italic;
+  margin-bottom: 4px; letter-spacing: -0.01em;
+}
+.bike-sub { font-size: 13px; color: var(--gray-text); margin-bottom: 20px; letter-spacing: 0.02em; }
+.bike-prices {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px; background: var(--gray-mid);
+  border: 1px solid var(--gray-mid);
+  margin-bottom: 20px;
+}
+.price-cell { background: var(--white); padding: 12px; text-align: center; }
+.price-cell .amt {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px; font-weight: 700; display: block;
+}
+.price-cell .per { font-size: 10px; color: var(--gray-text); letter-spacing: 0.08em; text-transform: uppercase; }
+.bike-cta {
+  display: block; text-align: center;
+  padding: 11px; background: var(--black); color: var(--white);
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  font-weight: 500; text-decoration: none; transition: opacity 0.2s;
+}
+.bike-cta:hover { opacity: 0.7; }
+
+/* PRICING */
+.pricing { background: var(--gray-light); }
+.pricing-tabs { display: flex; gap: 0; margin-bottom: 40px; border: 1px solid var(--gray-mid); display: inline-flex; }
+.tab-btn {
+  padding: 11px 28px; border: none; background: transparent;
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  font-weight: 500; cursor: pointer; color: var(--gray-text);
+  border-right: 1px solid var(--gray-mid); transition: all 0.15s;
+}
+.tab-btn:last-child { border-right: none; }
+.tab-btn.active { background: var(--black); color: var(--white); }
+.pricing-table { width: 100%; border-collapse: collapse; border: 1px solid var(--gray-mid); background: var(--white); }
+.pricing-table th {
+  background: var(--black); color: var(--white);
+  padding: 14px 20px; text-align: left;
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
+}
+.pricing-table td { padding: 14px 20px; border-bottom: 1px solid var(--gray-mid); font-size: 14px; }
+.pricing-table tr:last-child td { border-bottom: none; }
+.pricing-table tr:hover td { background: var(--gray-light); }
+.price-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px; font-weight: 700;
+}
+.save-tag {
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  border: 1px solid var(--black); padding: 2px 7px; margin-left: 8px;
+  font-weight: 600;
+}
+
+/* HOW IT WORKS */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; margin-top: 56px; }
+.step-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 72px; font-weight: 800; font-style: italic;
+  line-height: 1; color: var(--gray-mid); margin-bottom: 16px;
+  letter-spacing: -0.03em;
+}
+.step h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.step p { font-size: 14px; color: var(--gray-text); line-height: 1.65; font-weight: 300; }
+
+/* AREAS */
+.areas { background: var(--gray-light); }
+.areas-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px; background: var(--gray-mid); border: 1px solid var(--gray-mid);
+  margin-top: 56px;
+}
+.area-item { background: var(--gray-light); padding: 28px 20px; }
+.area-item h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; font-style: italic; margin-bottom: 4px; }
+.area-item p { font-size: 12px; color: var(--gray-text); letter-spacing: 0.02em; }
+
+/* REQUIREMENTS */
+.req-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gray-mid); border: 1px solid var(--gray-mid); margin-top: 56px; }
+.req-col { background: var(--white); padding: 40px 36px; }
+.req-col h3 { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 24px; font-weight: 500; }
+.req-col ul { list-style: none; }
+.req-col li { font-size: 15px; padding: 12px 0; border-bottom: 1px solid var(--gray-mid); display: flex; align-items: flex-start; gap: 12px; font-weight: 300; }
+.req-col li:last-child { border-bottom: none; }
+.req-col li::before { content: '—'; color: var(--black); font-weight: 600; flex-shrink: 0; }
+.notice {
+  margin-top: 24px;
+  padding: 20px 24px;
+  border: 1px solid var(--black);
+  font-size: 14px; font-weight: 300; color: var(--gray-dark); line-height: 1.7;
+}
+.notice strong { font-weight: 600; display: block; margin-bottom: 4px; }
+
+/* FAQ */
+.faq-list { max-width: 680px; margin-top: 56px; }
+.faq-item { border-bottom: 1px solid var(--gray-mid); }
+.faq-q {
+  width: 100%; text-align: left; background: none; border: none;
+  padding: 20px 0; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 500;
+  color: var(--black); gap: 16px;
+}
+.faq-q:hover { color: var(--gray-text); }
+.faq-icon { font-size: 18px; flex-shrink: 0; font-weight: 300; transition: transform 0.25s; }
+.faq-a { display: none; padding: 0 0 20px; font-size: 14px; color: var(--gray-text); line-height: 1.75; font-weight: 300; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-item.open .faq-a { display: block; }
+
+/* CTA STRIP */
+.cta-strip {
+  background: var(--black); color: var(--white);
+  padding: 72px 6vw;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 32px; flex-wrap: wrap;
+}
+.cta-strip h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700; font-style: italic;
+  line-height: 1; letter-spacing: -0.01em;
+}
+.cta-strip p { font-size: 15px; opacity: 0.6; margin-top: 8px; font-weight: 300; }
+.btn-white {
+  background: var(--white); color: var(--black);
+  padding: 14px 32px; font-size: 13px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; display: inline-block; transition: opacity 0.2s; flex-shrink: 0;
+}
+.btn-white:hover { opacity: 0.8; }
+
+/* CONTACT */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.contact-left .section-sub { margin-bottom: 40px; }
+.contact-methods { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--gray-mid); }
+.contact-method {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 20px; border-bottom: 1px solid var(--gray-mid);
+  text-decoration: none; color: var(--black); transition: background 0.15s;
+}
+.contact-method:last-child { border-bottom: none; }
+.contact-method:hover { background: var(--gray-light); }
+.cm-icon { font-size: 18px; width: 36px; text-align: center; flex-shrink: 0; }
+.cm-text strong { display: block; font-size: 14px; font-weight: 500; }
+.cm-text span { font-size: 12px; color: var(--gray-text); }
+
+/* FORM */
+.contact-form-wrap { border: 1px solid var(--gray-mid); }
+.form-header { padding: 24px 28px; border-bottom: 1px solid var(--gray-mid); }
+.form-header h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px; font-weight: 700; font-style: italic;
+}
+.form-header p { font-size: 13px; color: var(--gray-text); margin-top: 4px; }
+.form-body { padding: 28px; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; color: var(--gray-text); margin-bottom: 7px; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 10px 14px;
+  border: 1px solid var(--gray-mid); background: var(--white);
+  font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--black);
+  outline: none; transition: border-color 0.15s; appearance: none;
+  font-weight: 300;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--black); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-check { display: flex; align-items: flex-start; gap: 10px; margin-top: 4px; }
+.form-check input { width: auto; margin-top: 2px; flex-shrink: 0; }
+.form-check label { font-size: 12px; color: var(--gray-text); text-transform: none; letter-spacing: 0; font-weight: 300; }
+.form-submit {
+  width: 100%; padding: 14px;
+  background: var(--black); color: var(--white); border: none;
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  font-weight: 500; cursor: pointer; transition: opacity 0.2s; margin-top: 16px;
+}
+.form-submit:hover { opacity: 0.75; }
+
+/* FOOTER */
+footer {
+  background: var(--black); color: rgba(255,255,255,0.5);
+  padding: 56px 6vw 28px;
+}
+.footer-top { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; margin-bottom: 48px; align-items: flex-start; }
+.footer-logo img { height: 22px; filter: invert(1); }
+.footer-logo p { font-size: 13px; margin-top: 12px; max-width: 200px; line-height: 1.6; font-weight: 300; }
+.footer-nav h4 {
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.9); margin-bottom: 14px; font-weight: 500;
+}
+.footer-nav ul { list-style: none; }
+.footer-nav li { margin-bottom: 9px; }
+.footer-nav a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; font-weight: 300; }
+.footer-nav a:hover { color: #fff; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.footer-bottom span { font-size: 12px; }
+
+/* WHATSAPP FLOAT */
+.wa-float {
+  position: fixed; bottom: 24px; right: 24px; z-index: 999;
+  width: 52px; height: 52px;
+  background: var(--white); border: 1px solid var(--gray-mid);
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; transition: all 0.2s;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+}
+.wa-float:hover { background: var(--black); border-color: var(--black); }
+.wa-float:hover svg { fill: var(--white); }
+.wa-float svg { width: 24px; height: 24px; fill: var(--black); transition: fill 0.2s; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .req-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .hero { min-height: 80vh; padding: 0 5vw 56px; }
+  .hero-headline { font-size: clamp(60px, 18vw, 120px); }
+  .hero-actions { align-items: flex-start; }
+  .form-row { grid-template-columns: 1fr; }
+  .cta-strip { flex-direction: column; }
+  section { padding: 64px 5vw; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#"><img src="wheels-logo.jpg" alt="Wheels Bali" class="logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="#fleet">Fleet</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#areas">Areas</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/6281234567890?text=Hi+Wheels%2C+I%27m+interested+in+renting+a+bike+in+Bali.+Can+you+help+me+check+availability%3F" class="nav-wa" target="_blank">WhatsApp Us</a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-top">
+    <span class="hero-top-tag">Bali's trusted motorbike rental</span>
+  </div>
+  <div class="hero-headline">Exciting<br>Ride in<br>Bali.</div>
+  <div class="hero-bottom">
+    <p class="hero-desc">Motorbikes and scooters delivered to your door. Daily, weekly, and monthly rental — clean bikes, fair prices, no stress.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/6281234567890?text=Hi+Wheels%2C+I%27m+interested+in+renting+a+bike+in+Bali.+Can+you+help+me+check+availability%3F" class="btn-black" target="_blank">WhatsApp to Book</a>
+      <a href="#fleet" class="btn-outline">See Our Fleet</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div><div class="stat-num">500+</div><div class="stat-label">Happy riders</div></div>
+    <div><div class="stat-num">7</div><div class="stat-label">Areas covered</div></div>
+    <div><div class="stat-num">3hr</div><div class="stat-label">Delivery time</div></div>
+    <div><div class="stat-num">24/7</div><div class="stat-label">WhatsApp support</div></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="section-label">Why choose us</div>
+  <h2 class="section-title">Simple. Reliable.<br>Delivered to you.</h2>
+  <div class="why-grid">
+    <div class="why-item"><div class="why-num">01</div><h3>Well-maintained bikes</h3><p>Every bike is regularly serviced. You get a bike that starts first time, every time.</p></div>
+    <div class="why-item"><div class="why-num">02</div><h3>Free delivery & pickup</h3><p>We bring the bike to you and collect it when you're done. No need to go anywhere.</p></div>
+    <div class="why-item"><div class="why-num">03</div><h3>Real WhatsApp support</h3><p>Got a flat tyre at midnight? Message us. We're here throughout your rental.</p></div>
+    <div class="why-item"><div class="why-num">04</div><h3>Transparent pricing</h3><p>What we quote is what you pay. The longer you rent, the more you save.</p></div>
+    <div class="why-item"><div class="why-num">05</div><h3>Quick booking</h3><p>WhatsApp us or fill the form. Most bookings confirmed in under 30 minutes.</p></div>
+    <div class="why-item"><div class="why-num">06</div><h3>All Bali areas</h3><p>Canggu, Uluwatu, Seminyak, Ubud, Denpasar, Sanur — if you're in Bali, we reach you.</p></div>
+  </div>
+</section>
+
+<!-- FLEET -->
+<section id="fleet">
+  <div class="fleet-header">
+    <div>
+      <div class="section-label">Our bikes</div>
+      <h2 class="section-title">Choose your ride.</h2>
+    </div>
+    <p class="section-sub" style="max-width:320px">From lightweight automatics to adventure bikes — we have the right bike for every rider.</p>
+  </div>
+  <div class="fleet-grid">
+    <div class="bike-card">
+      <div class="bike-visual">🛵<div class="bike-tag">Most popular</div></div>
+      <div class="bike-body">
+        <h3>Automatic Scooter</h3>
+        <div class="bike-sub">Honda Beat / Yamaha Mio · 110–125cc</div>
+        <div class="bike-prices">
+          <div class="price-cell"><span class="amt">80K</span><span class="per">/ day</span></div>
+          <div class="price-cell"><span class="amt">450K</span><span class="per">/ week</span></div>
+          <div class="price-cell"><span class="amt">1.2M</span><span class="per">/ month</span></div>
+        </div>
+        <a href="https://wa.me/6281234567890?text=Hi+Wheels%2C+I%27d+like+to+rent+an+automatic+scooter.+Can+you+check+availability%3F" class="bike-cta" target="_blank">Ask about this bike</a>
+      </div>
+    </div>
+    <div class="bike-card">
+      <div class="bike-visual">🏍️<div class="bike-tag">Great for touring</div></div>
+      <div class="bike-body">
+        <h3>Large Scooter</h3>
+        <div class="bike-sub">Honda Vario / Yamaha NMAX · 150–155cc</div>
+        <div class="bike-prices">
+          <div class="price-cell"><span class="amt">100K</span><span class="per">/ day</span></div>
+          <div class="price-cell"><span class="amt">600K</span><span class="per">/ week</span></div>
+          <div class="price-cell"><span class="amt">1.5M</span><span class="per">/ month</span></div>
+        </div>
+        <a href="https://wa.me/6281234567890?text=Hi+Wheels%2C+I%27d+like+to+rent+a+large+scooter.+Can+you+check+availability%3F" class="bike-cta" target="_blank">Ask about this bike</a>
+      </div>
+    </div>
+    <div class="bike-card">
+      <div class="bike-visual">🏍️<div class="bike-tag">Off-road ready</div></div>
+      <div class="bike-body">
+        <h3>Trail / Adventure</h3>
+        <div class="bike-sub">Honda CRF / Kawasaki KLX · 150cc+</div>
+        <div class="bike-prices">
+          <div class="price-cell"><span class="amt">150K</span><span class="per">/ day</span></div>
+          <div class="price-cell"><span class="amt">900K</span><span class="per">/ week</span></div>
+          <div class="price-cell"><span class="amt">2.2M</span><span class="per">/ month</span></div>
+        </div>
+        <a href="https://wa.me/6281234567890?text=Hi+Wheels%2C+I%27d+like+to+rent+a+trail+bike.+Can+you+check+availability%3F" class="bike-cta" target="_blank">Ask about this bike</a>
+      </div>
+    </div>
+  </div>
+  <p style="margin-top:20px;font-size:13px;color:var(--gray-text);font-weight:300">* Prices in IDR. All rentals include 1 helmet. WhatsApp us for exact current pricing and availability.</p>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="section-label">Rental plans</div>
+  <h2 class="section-title">Simple, honest pricing.</h2>
+  <p class="section-sub">The longer you rent, the more you save. Monthly is our best value for long-stay visitors and digital nomads.</p>
+  <br><br>
+  <div class="pricing-tabs">
+    <button class="tab-btn active" onclick="showTab('daily')">Daily</button>
+    <button class="tab-btn" onclick="showTab('weekly')">Weekly</button>
+    <button class="tab-btn" onclick="showTab('monthly')">Monthly</button>
+  </div>
+  <div id="tab-daily">
+    <table class="pricing-table">
+      <thead><tr><th>Bike Type</th><th>Daily Rate</th><th>Includes</th></tr></thead>
+      <tbody>
+        <tr><td>Automatic Scooter (110–125cc)</td><td class="price-val">IDR 80,000</td><td>1 helmet, delivery available</td></tr>
+        <tr><td>Large Scooter (150–155cc)</td><td class="price-val">IDR 100,000</td><td>1 helmet, delivery available</td></tr>
+        <tr><td>Trail / Adventure (150cc+)</td><td class="price-val">IDR 150,000</td><td>1 helmet, delivery available</td></tr>
+        <tr><td>Extra helmet</td><td class="price-val">IDR 15,000</td><td>Per day add-on</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="tab-weekly" style="display:none">
+    <table class="pricing-table">
+      <thead><tr><th>Bike Type</th><th>Weekly Rate</th><th>Saving vs Daily</th></tr></thead>
+      <tbody>
+        <tr><td>Automatic Scooter (110–125cc)</td><td class="price-val">IDR 450,000</td><td><span class="save-tag">Save 20%</span></td></tr>
+        <tr><td>Large Scooter (150–155cc)</td><td class="price-val">IDR 600,000</td><td><span class="save-tag">Save 14%</span></td></tr>
+        <tr><td>Trail / Adventure (150cc+)</td><td class="price-val">IDR 900,000</td><td><span class="save-tag">Save 14%</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="tab-monthly" style="display:none">
+    <table class="pricing-table">
+      <thead><tr><th>Bike Type</th><th>Monthly Rate</th><th>Saving vs Daily</th></tr></thead>
+      <tbody>
+        <tr><td>Automatic Scooter (110–125cc)</td><td class="price-val">IDR 1,200,000</td><td><span class="save-tag">Save 50%</span></td></tr>
+        <tr><td>Large Scooter (150–155cc)</td><td class="price-val">IDR 1,500,000</td><td><span class="save-tag">Save 50%</span></td></tr>
+        <tr><td>Trail / Adventure (150cc+)</td><td class="price-val">IDR 2,200,000</td><td><span class="save-tag">Save 51%</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:16px;font-size:13px;color:var(--gray-text);font-weight:300">Free delivery within 10km. Small fee for longer distances — ask us for details.</p>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-label">Booking process</div>
+  <h2 class="section-title">How it works.</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">01</div><h3>Send us a message</h3><p>WhatsApp us or fill the inquiry form. Tell us which bike, your dates, and your location in Bali.</p></div>
+    <div class="step"><div class="step-num">02</div><h3>We confirm availability</h3><p>We check and send you rental details and price. Quick reply guaranteed.</p></div>
+    <div class="step"><div class="step-num">03</div><h3>Bike delivered to you</h3><p>We bring the bike to your villa, hotel, or wherever you're staying. No need to come to us.</p></div>
+    <div class="step"><div class="step-num">04</div><h3>Ride & enjoy Bali</h3><p>You're set. Message us anytime for help. We collect the bike when you're done.</p></div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="areas" id="areas">
+  <div class="section-label">Delivery areas</div>
+  <h2 class="section-title">We cover all of Bali.</h2>
+  <p class="section-sub">Not sure if we cover your area? Just ask — we almost certainly do.</p>
+  <div class="areas-grid">
+    <div class="area-item"><h3>Canggu</h3><p>Echo Beach, Berawa, Pererenan</p></div>
+    <div class="area-item"><h3>Uluwatu</h3><p>Bingin, Padang, Jimbaran</p></div>
+    <div class="area-item"><h3>Seminyak</h3><p>Kuta, Legian, Double Six</p></div>
+    <div class="area-item"><h3>Ubud</h3><p>Central Ubud, Tegalalang</p></div>
+    <div class="area-item"><h3>Denpasar</h3><p>City centre & surrounds</p></div>
+    <div class="area-item"><h3>Sanur</h3><p>Beach strip & nearby areas</p></div>
+    <div class="area-item"><h3>Everywhere else</h3><p>Nusa Dua, Gianyar & more</p></div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS -->
+<section id="requirements">
+  <div class="section-label">What you need</div>
+  <h2 class="section-title">Rental requirements.</h2>
+  <div class="req-grid">
+    <div class="req-col">
+      <h3>Documents needed</h3>
+      <ul>
+        <li>Valid passport or national ID</li>
+        <li>International Driving Permit (IDP) or Indonesian SIM</li>
+        <li>Your WhatsApp number</li>
+        <li>Delivery address in Bali</li>
+      </ul>
+    </div>
+    <div class="req-col">
+      <h3>What we provide</h3>
+      <ul>
+        <li>1 helmet included with every rental</li>
+        <li>Bike in good working condition</li>
+        <li>Full fuel tank at delivery</li>
+        <li>WhatsApp support throughout</li>
+        <li>Free collection at end of rental</li>
+      </ul>
+    </div>
+  </div>
+  <div class="notice">
+    <strong>Licence requirement</strong>
+    Riding in Bali requires a valid licence. An International Driving Permit (IDP) is the safest option. If you're unsure, message us on WhatsApp and we'll help you figure it out before you book.
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-label">FAQ</div>
+  <h2 class="section-title">Common questions.</h2>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">Do you deliver to my hotel or villa? <span class="faq-icon">+</span></button><div class="faq-a">Yes — free delivery within 10km of our main areas. If you're further away, there's a small extra charge. Tell us your location and we'll confirm. Most of Bali is no problem.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">Do I need an International Driving Permit? <span class="faq-icon">+</span></button><div class="faq-a">An IDP is recommended for riding legally in Bali. You can get one from your home country's automobile association before you travel. If you already have an Indonesian SIM, that works too. Message us if you're unsure.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">What happens if the bike breaks down? <span class="faq-icon">+</span></button><div class="faq-a">WhatsApp us immediately. We'll either send someone to assist or arrange a replacement bike. We don't leave you stranded.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">Is there a security deposit? <span class="faq-icon">+</span></button><div class="faq-a">Yes, a small refundable deposit around IDR 300,000–500,000. Returned when you give back the bike in good condition. We'll confirm the exact amount when you book.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">Can I extend my rental? <span class="faq-icon">+</span></button><div class="faq-a">Absolutely. Just WhatsApp us before your rental ends and we'll extend it — subject to availability. We're flexible.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">Do you have bikes for beginners? <span class="faq-icon">+</span></button><div class="faq-a">Yes. Our automatic scooters (Honda Beat, Yamaha Mio) are perfect for beginners — easy with no gears. Tell us you're a first-timer and we'll recommend the right bike and give you a quick orientation on delivery.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">How do I pay? <span class="faq-icon">+</span></button><div class="faq-a">We accept cash (IDR) at delivery. If you'd like to pay upfront via transfer, just ask and we'll arrange it.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">Can I rent for longer than a month? <span class="faq-icon">+</span></button><div class="faq-a">Yes — we love long-term renters. Digital nomads and expats often rent for 3, 6, or 12 months. Message us and we'll give you the best rate we can.</div></div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <div>
+    <h2>Ready to explore Bali?</h2>
+    <p>Most bookings confirmed within 30 minutes.</p>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap">
+    <a href="https://wa.me/6281234567890?text=Hi+Wheels%2C+I%27m+interested+in+renting+a+bike+in+Bali.+Can+you+help+me+check+availability%3F" class="btn-white" target="_blank">WhatsApp to Book</a>
+    <a href="#contact" class="btn-outline" style="border-color:rgba(255,255,255,0.4);color:#fff">Send Inquiry</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-left">
+      <div class="section-label">Get in touch</div>
+      <h2 class="section-title">Book your bike<br>or ask anything.</h2>
+      <p class="section-sub">The fastest way is WhatsApp — we usually reply within 30 minutes. Or fill the form and we'll get back to you.</p>
+      <div class="contact-methods">
+        <a href="https://wa.me/6281234567890?text=Hi+Wheels%2C+I%27m+interested+in+renting+a+bike+in+Bali.+Can+you+help+me+check+availability%3F" class="contact-method" target="_blank">
+          <div class="cm-icon">💬</div>
+          <div class="cm-text"><strong>WhatsApp (fastest)</strong><span>+62 812-3456-7890 · Replies in under 30 min</span></div>
+        </a>
+        <div class="contact-method">
+          <div class="cm-icon">📍</div>
+          <div class="cm-text"><strong>Based in Bali, Indonesia</strong><span>Delivery across all areas of Bali</span></div>
+        </div>
+        <div class="contact-method">
+          <div class="cm-icon">🕐</div>
+          <div class="cm-text"><strong>Operating hours</strong><span>Every day, 8am – 9pm Bali time (WITA)</span></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="contact-form-wrap">
+        <div class="form-header">
+          <h3>Quick Inquiry Form</h3>
+          <p>Fill this in and we'll WhatsApp you back with availability and pricing.</p>
+        </div>
+        <div class="form-body">
+          <form onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="form-group"><label>Your name</label><input type="text" placeholder="e.g. Sarah" required></div>
+              <div class="form-group"><label>WhatsApp number</label><input type="tel" placeholder="+1 555 000 0000" required></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Start date</label><input type="date" required></div>
+              <div class="form-group"><label>End date</label><input type="date" required></div>
+            </div>
+            <div class="form-group">
+              <label>Bike type</label>
+              <select required>
+                <option value="">Select a bike type</option>
+                <option>Automatic Scooter (best for beginners)</option>
+                <option>Large Scooter 150cc (more power)</option>
+                <option>Trail / Adventure Bike</option>
+                <option>Not sure — help me choose</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Delivery location in Bali</label><input type="text" placeholder="e.g. Canggu, Echo Beach area" required></div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Rental type</label>
+                <select required>
+                  <option value="">Select...</option>
+                  <option>Daily</option><option>Weekly</option>
+                  <option>Monthly</option><option>Long-term (2+ months)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Helmets needed</label>
+                <select>
+                  <option>1 helmet (included)</option>
+                  <option>2 helmets</option>
+                  <option>No helmet needed</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group"><label>Anything else we should know?</label><textarea rows="2" placeholder="e.g. First time riding, need a beginner bike..."></textarea></div>
+            <div class="form-check">
+              <input type="checkbox" id="lic" required>
+              <label for="lic">I confirm I have a valid driving licence / IDP and am legally allowed to ride a motorbike</label>
+            </div>
+            <button type="submit" class="form-submit">Send Inquiry via WhatsApp →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="wheels-logo.jpg" alt="Wheels Bali">
+      <p>Your trusted motorbike and scooter rental in Bali. Delivering freedom, one ride at a time.</p>
+    </div>
+    <div class="footer-nav">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#fleet">Our Fleet</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#areas">Delivery Areas</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-nav">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/6281234567890" target="_blank">WhatsApp: +62 812-3456-7890</a></li>
+        <li><a href="#contact">Inquiry Form</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Wheels Bali. All rights reserved.</span>
+    <span>Exciting Ride in Bali</span>
+  </div>
+</footer>
+
+<!-- FLOATING WA BUTTON -->
+<a href="https://wa.me/6281234567890?text=Hi+Wheels%2C+I%27m+interested+in+renting+a+bike+in+Bali.+Can+you+help+me+check+availability%3F" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  const visible = links.style.display === 'flex';
+  links.style.cssText = visible ? '' : 'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:16px 6vw 24px;border-bottom:1px solid #E0E0E0;z-index:99;gap:16px';
+}
+function showTab(tab) {
+  ['daily','weekly','monthly'].forEach(t => {
+    document.getElementById('tab-'+t).style.display = t===tab ? 'block' : 'none';
+  });
+  document.querySelectorAll('.tab-btn').forEach((btn,i) => {
+    btn.classList.toggle('active', ['daily','weekly','monthly'][i]===tab);
+  });
+}
+function toggleFAQ(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+function submitForm(e) {
+  e.preventDefault();
+  const f = e.target;
+  const inputs = f.querySelectorAll('input[type="text"], input[type="tel"]');
+  const dates = f.querySelectorAll('input[type="date"]');
+  const selects = f.querySelectorAll('select');
+  const notes = f.querySelector('textarea').value;
+  const msg = `Hi Wheels! I'd like to rent a bike.\n\nName: ${inputs[0].value}\nWhatsApp: ${inputs[1].value}\nDates: ${dates[0].value} to ${dates[1].value}\nBike: ${selects[0].value}\nRental type: ${selects[1].value}\nDelivery to: ${inputs[2]?.value||''}\nHelmets: ${selects[2].value}${notes?'\nNotes: '+notes:''}`;
+  window.open('https://wa.me/6281234567890?text='+encodeURIComponent(msg),'_blank');
+}
+</script>
+</body>
+</html>
